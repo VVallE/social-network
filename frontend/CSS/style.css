@@ -5,7 +5,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block: 30px;
 }
 form {
     margin-top: 40px;
@@ -13,29 +12,38 @@ form {
 
 .left-edge {
     display: flex;
+    margin-top: 200px;
     flex-direction: column;
     align-items: flex-start;
 }
 .right-edge {
     display: flex;
+    margin-top: 20px;
+    flex-direction: column;
     align-items: flex-end;
 }
 
 input {
     display: block;
-    margin-block: 10%;
+    margin-block: 20px;
     width: 90vw;
     border-style: solid;
     border-color: white white black white;
 }
 
-#signup-btn {
+#submit-btn {
     width: 60%;
-    margin-top: 30%;
+    margin-top: 40px;
     font-size: large;
     border-style: solid;
     border-radius: 30px;
     background-color: rgb(36, 36, 36);
     border-color: rgb(36, 36, 36);
     color:white
+}
+
+#slogan {
+    margin-top: 100px;
+    font-family: 'IM FELL Great Primer SC';
+    color: #000000;
 }
