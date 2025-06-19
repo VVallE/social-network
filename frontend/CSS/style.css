@@ -15,7 +15,7 @@ form {
 
 .left-edge {
     display: flex;
-    margin-top: 200px;
+    margin-top: 60px;
     flex-direction: column;
 }
 .right-edge {
@@ -48,6 +48,16 @@ input {
     margin-top: 100px;
     font-family: 'IM FELL Great Primer SC', 'Times New Roman';
     color: #000000;
+}
+
+#error {
+    display: none;
+    padding-inline: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(255, 46, 46);
+    background-color: rgb(255, 182, 182);
 }
 
 #navbar-top {

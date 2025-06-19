@@ -15,15 +15,20 @@
         <div class="left-edge">
             <h1>Sign up</h1>
             <form method="POST">
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Surname">
-                <input type="tel" placeholder="Phone number">
-                <button type="submit" id="submit-btn">Sign up</button>
-            </form>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="surname" placeholder="Surname">
+                <input type="tel" id="phone" placeholder="Phone number">
+                
+                <div id="error">
+                    <h3 id="error-txt">Hey</h3>
+                </div>
         </div>
+                <button type="submit" id="signup" class="submit-btn">Sign up</button>
+            </form>
     </div>
+    <script src="../JS/register.js"></script>
 </body>
 </html>

@@ -1,14 +1,5 @@
-function register(username, password, email, name, surname, phone, errorbox, errormsg) {
-    if (password.length < 8) {
-        errorbox.style.display = "block";
-        errormsg.innerText = "Password must be equal to or over 8 characters"
-        return 1;
-    }
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("register").addEventListener("click", function (event) {
+    document.getElementById("login").addEventListener("click", function (event) {
 
         const email = document.getElementById("email").value;
         const username = document.getElementById("username").value;
