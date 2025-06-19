@@ -4,11 +4,23 @@ function register(username, password, email, name, surname, phone, errorbox, err
         errormsg.innerText = "Password must be equal to or over 8 characters"
         return 1;
     }
+    let hasdigits = false;
+    for (let i = 0; i < password.length; i++) {
+        if ("0123456789".includes(password[i])) {
+            hasdigits = true;
+        }
+    }
+    if (hasdigits == false) {
+        errorbox.style.display = "block";
+        errormsg.innerText = "Password must contain at least one digit"
+        return 1;
+    }
 }
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("register").addEventListener("click", function (event) {
+    document.getElementById("signup").addEventListener("click", function (event) {
+        event.preventDefault()
 
         const email = document.getElementById("email").value;
         const username = document.getElementById("username").value;
