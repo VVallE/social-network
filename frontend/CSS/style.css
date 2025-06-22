@@ -8,9 +8,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10%;
 }
 form {
     margin-top: 40px;
+}
+
+.google-register {
+    color:gray
+}
+
+#logo {
+    position:absolute;
+    margin-top: 3%;
 }
 
 .left-edge {

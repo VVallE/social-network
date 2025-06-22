@@ -1,7 +1,16 @@
 function register(username, password, email, name, surname, phone, errorbox, errormsg) {
     if (password.length < 8) {
         errorbox.style.display = "block";
-        errormsg.innerText = "Password must be equal to or over 8 characters"
+        errormsg.innerText = "Password must be equal to or over 8 characters";
+        return 1;
+    } else if (password.length < 48) {
+        errorbox.style.display = "block";
+        errormsg.innerText = "Password must be shorter than 48 characters"
+    }
+
+    if (username.length < 3) {
+        errorbox.style.display = "block";
+        errormsg.innerText = "Username must be at least 3 characters long";
         return 1;
     }
     let hasdigits = false;
@@ -12,7 +21,18 @@ function register(username, password, email, name, surname, phone, errorbox, err
     }
     if (hasdigits == false) {
         errorbox.style.display = "block";
-        errormsg.innerText = "Password must contain at least one digit"
+        errormsg.innerText = "Password must contain at least one digit";
+        return 1;
+    }
+    let specialChars = false;
+    for (let i = 0; i < username.length; i++) {
+        if ("'\"`".includes(username[i])) {
+            specialChars = true;
+        }
+    }
+    if (specialChars == false) {
+        errorbox.style.display = "block";
+        errormsg.innerText = "Username can't contain quotes";
         return 1;
     }
 }
