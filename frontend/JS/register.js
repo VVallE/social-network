@@ -6,7 +6,10 @@ function register(username, password, email, name, surname, phone, errormsg) {
     } else if (password.length > 48) {
         errormsg.style.display = "block";
         errormsg.innerHTML = "Password must be shorter than 48 characters"
+<<<<<<< HEAD
         return 1;
+=======
+>>>>>>> 2fa6096 (Upd)
     }
 
     if (username.length < 3) {
@@ -41,7 +44,7 @@ function register(username, password, email, name, surname, phone, errormsg) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer s'
+            'Authorization': 'Bearers supersecretkey'
         },
         body: JSON.stringify({
             username: username,
@@ -69,7 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById("name").value;
         const surname = document.getElementById("surname").value;
         const phone = document.getElementById("phone").value;
+<<<<<<< HEAD
         const errormsg = document.getElementById("error");
+=======
+        const errormsg = document.getElementById("errormsg");
+>>>>>>> 2fa6096 (Upd)
 
         register(username, password, email, name, surname, phone, errormsg);
         
