@@ -84,11 +84,26 @@ input {
     border-style: solid;
     border-color: white;
     background-color: white;
+    border-radius: 1000px;
 }
 .navbar-btn:active {
     transition-duration: 300ms;
     background-color: rgb(177, 177, 177);
 }
+
+.navbar-btn-top {
+    width: 100%;
+    height: 50px;
+    font-size: large;
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+}
+.navbar-btn-top:active {
+    transition-duration: 300ms;
+    background-color: rgb(177, 177, 177);
+}
+
 
 #navbar-bottom {
     display: flex;

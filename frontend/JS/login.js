@@ -13,7 +13,6 @@ function login(username, password, errogmsg) {
         .then(response => response.json())
         .then(data => localStorage.setItem('jwt_key', data['access_token']))
         .catch(error => console.error('Error:', error));
-
 }
 
 

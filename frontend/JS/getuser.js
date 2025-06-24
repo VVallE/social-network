@@ -1,10 +1,12 @@
-function getInfoAboutSelf() {
-    let jwt_token = localStorage.getItem('jwt_key');
-    fetch('http://localhost:5000/api/me', {
+function getUser() {
+    const url = window.location.pathname.split('/');
+    const userID = url.pop();
+
+    fetch(`http://localhost:5000/api/user/${userID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${jwt_token}`
+            'Authorization': `Bearer s`
         }
     })
         .then(response => response.json())
@@ -12,4 +14,5 @@ function getInfoAboutSelf() {
         .catch(error => console.error('Error:', error));
 }
 
-getInfoAboutSelf()
+
+getUser();
