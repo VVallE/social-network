@@ -15,16 +15,17 @@
         <img id="logo"src="./static/logo.svg" alt="Logo">
         <h2 id="slogan">W.T.W.</h2>
         <div class="left-edge">
-            <h2>Log in</h2>
+            <h2 class="register-text">Log in</h2>
             <form method="POST">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
         </div>
-                <button class="submit-btn" id="login"type="submit">Log in</button>
+                <button class="submit-btn" id="login" type="submit">Log in</button>
             </form>
+            <p id="error">Hie</p>
         <p class="google-register">Or sign up with your Google account</p>
         <button>Google login button</button>
     </div>
-    <script src="../JS/register.js"></script>
+    <script src="../JS/login.js"></script>
 </body>
 </html>

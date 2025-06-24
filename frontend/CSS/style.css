@@ -11,7 +11,7 @@
     margin-top: 10%;
 }
 form {
-    margin-top: 40px;
+    margin-top: 180px;
 }
 
 .google-register {
@@ -20,7 +20,7 @@ form {
 
 #logo {
     position:absolute;
-    margin-top: 3%;
+    margin-top: 170px;
 }
 
 .left-edge {
@@ -39,11 +39,12 @@ input {
     display: block;
     margin-block: 20px;
     width: 90vw;
+    border-width: 1px;
     border-style: solid;
-    border-color: white white black white;
+    border-color: white white rgb(104, 104, 104) white;
 }
 
-#submit-btn {
+.submit-btn {
     width: 60%;
     margin-top: 40px;
     font-size: large;
@@ -55,19 +56,15 @@ input {
 }
 
 #slogan {
-    margin-top: 100px;
+    position:absolute;
+    margin-top: 250px;
     font-family: 'IM FELL Great Primer SC', 'Times New Roman';
     color: #000000;
 }
 
 #error {
     display: none;
-    padding-inline: 5px;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgb(255, 46, 46);
-    background-color: rgb(255, 182, 182);
+    color: rgb(255, 0, 0);
 }
 
 #navbar-top {

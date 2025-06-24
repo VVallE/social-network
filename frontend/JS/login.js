@@ -1,16 +1,31 @@
+function login(username, password, errogmsg) {
+    fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer s'
+        },
+        body: JSON.stringify({
+            username: username,
+            password: password,
+        })
+    })
+        .then(response => response.json())
+        .then(data => localStorage.setItem('jwt_key', data['access_token']))
+        .catch(error => console.error('Error:', error));
+
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("login").addEventListener("click", function (event) {
+        event.preventDefault();
 
-        const email = document.getElementById("email").value;
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
-        const name = document.getElementById("name").value;
-        const surname = document.getElementById("surname").value;
-        const phone = document.getElementById("phone").value;
-        const errorbox = document.getElementById("error");
-        const errormsg = document.getElementById("error-txt");
+        const errormsg = document.getElementById("error");
 
-        register(username, password, email, name, surname, phone, errorbox, errormsg);
+        login(username, password, errormsg);
         
     });
 });

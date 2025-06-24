@@ -1,13 +1,17 @@
 function register(username, password, email, name, surname, phone, errormsg) {
     if (password.length < 8) {
-        errormsg.innerHTML = "<span style=\"color=red;\">Password must be equal to or over 8 characters</span>";
+        errormsg.style.display = "block";
+        errormsg.innerHTML = "Password must be equal to or over 8 characters";
         return 1;
     } else if (password.length > 48) {
-        errormsg.innerHTML = "<span style=\"color=red;\">Password must be shorter than 48 characters</span>"
+        errormsg.style.display = "block";
+        errormsg.innerHTML = "Password must be shorter than 48 characters"
+        return 1;
     }
 
     if (username.length < 3) {
-        errormsg.innerHTML = "<span style=\"color=red;\">Username must be at least 3 characters long</span>";
+        errormsg.style.display = "block";
+        errormsg.innerHTML = "Username must be at least 3 characters long";
         return 1;
     }
     let hasdigits = false;
@@ -17,7 +21,8 @@ function register(username, password, email, name, surname, phone, errormsg) {
         }
     }
     if (hasdigits == false) {
-        errormsg.innerHTML = "<span style=\"color=red;\">Password must contain at least one digit</span>";
+        errormsg.style.display = "block";
+        errormsg.innerHTML = "Password must contain at least one digit";
         return 1;
     }
     let specialChars = false;
@@ -27,7 +32,8 @@ function register(username, password, email, name, surname, phone, errormsg) {
         }
     }
     if (specialChars != false) {
-        errormsg.innerHTML = "<span style=\"color=red;\">Username can't contain quotes</span";
+        errormsg.style.display = "block";
+        errormsg.innerHTML = "Username can't contain quotes";
         return 1;
     }
 
@@ -55,7 +61,7 @@ function register(username, password, email, name, surname, phone, errormsg) {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("signup").addEventListener("click", function (event) {
-        event.preventDefault()
+        event.preventDefault();
 
         const email = document.getElementById("email").value;
         const username = document.getElementById("username").value;
@@ -63,8 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById("name").value;
         const surname = document.getElementById("surname").value;
         const phone = document.getElementById("phone").value;
-        const errorbox = document.getElementById("error");
-        const errormsg = document.getElementById("error-txt");
+        const errormsg = document.getElementById("error");
 
         register(username, password, email, name, surname, phone, errormsg);
         
