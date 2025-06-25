@@ -1,20 +1,33 @@
-function login(username, password, errogmsg) {
+function login(username, password, errormsg) {
     fetch('http://localhost:5000/api/login', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer s'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             username: username,
-            password: password,
+            password: password
         })
     })
         .then(response => response.json())
-        .then(data => localStorage.setItem('jwt_key', data['access_token']))
-        .catch(error => console.error('Error:', error));
+        .then(data => {
+            if (data.access_token) {
+                localStorage.setItem('jwt_key', data.access_token);
+                console.log('Login successful:', data);
+            } else {
+                console.error('Login failed:', data.msg);
+                if (errormsg) {
+                    errormsg.textContent = data.msg || 'Login failed';
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Network error:', error);
+            if (errormsg) {
+                errormsg.textContent = 'Network error occurred';
+            }
+        });
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("login").addEventListener("click", function (event) {
@@ -25,6 +38,5 @@ document.addEventListener("DOMContentLoaded", function () {
         const errormsg = document.getElementById("error");
 
         login(username, password, errormsg);
-        
     });
 });

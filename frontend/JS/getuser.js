@@ -1,8 +1,5 @@
-function getUser() {
-    const url = window.location.pathname.split('/');
-    const userID = url.pop();
-
-    fetch(`http://localhost:5000/api/user/${userID}`, {
+function getUser(usrID) {    
+    fetch(`http://localhost:5000/api/users/${usrID}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -14,5 +11,8 @@ function getUser() {
         .catch(error => console.error('Error:', error));
 }
 
-
-getUser();
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const userID = params.get('id');
+    getUser(userID);
+});

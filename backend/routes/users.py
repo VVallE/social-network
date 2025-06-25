@@ -17,6 +17,7 @@ def get_my_profile():
         }), 200
     return jsonify({"msg": "User not found"}), 404
 
+
 @user_bp.route('/users/<int:user_id>', methods=['GET'])
 def get_user_profile(user_id):
     user = User.query.get(user_id)

@@ -1,5 +1,5 @@
 function getInfoAboutSelf() {
-    let jwt_token = localStorage.getItem('jwt_key');
+    let jwt_token = localStorage.getItem("jwt_key");
     fetch('http://localhost:5000/api/me', {
         method: 'GET',
         headers: {
