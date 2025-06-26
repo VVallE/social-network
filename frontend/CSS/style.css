@@ -9,6 +9,17 @@ form {
     margin-top: 180px;
 }
 
+#about-me {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+#about-username {
+
+}
+
 #post-feed {
     height: 90vh;
     margin-top: 50px;
@@ -25,7 +36,9 @@ form {
     font-weight: 1000;
 }
 
-.post-date {}
+.post-like {
+    color: #000000;
+}
 
 .google-register {
     color:gray
