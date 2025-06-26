@@ -26,6 +26,9 @@ def get_posts():
     if mood:
         query = query.filter_by(mood=mood)
     posts = query.all()
+
+    print(f"Querying posts with mood={mood} => Found {len(posts)} posts")  # Debug line
+
     return jsonify([
         {"id": p.id, "content": p.content, "mood": p.mood, "author_id": p.author_id}
         for p in posts

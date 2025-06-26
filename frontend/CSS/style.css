@@ -9,6 +9,24 @@ form {
     margin-top: 180px;
 }
 
+#post-feed {
+    height: 90vh;
+    margin-top: 50px;
+}
+.post {
+    border-style: solid;
+    border-color: #949494;
+    padding-inline: 9px;
+}
+.post-author {
+    color: #666666;
+}
+.post-content {
+    font-weight: 1000;
+}
+
+.post-date {}
+
 .google-register {
     color:gray
 }
