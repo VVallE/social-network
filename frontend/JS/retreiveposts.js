@@ -40,10 +40,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         postElement.id = postnum;
 
         postElement.innerHTML = `
-            <div class="post-author" id="${postnum}-author">Author: ${post.author_id}</div>
             <div class="post-content">${post.content}</div>
-            <div class="post-date">Posted on: ${new Date(post.created_at)}</div>
-            <div class="post-like" id="${postnum}-like"><button>Like!</button></div>
+            <div class="post-date">Posted on: ${toString(post.created_at)}</div>
+            <br>
+            <div class="one-line">
+                <div class="post-author" id="${postnum}-author">Author: ${post.author_id}</div>
+                <p class="pain">||||||||||||||||||||||||||||||||||||||||||||||</p>
+                <div class="post-like" id="${postnum}-like"><button>Like!</button></div>
+            </div>
         `;
         feed.appendChild(postElement);
 

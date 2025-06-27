@@ -40,6 +40,12 @@ form {
     font-weight: 1000;
 }
 
+.one-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -59,9 +65,7 @@ body {
   font-style: normal;
 }
 
-.post-like {
-    color: #000000;
-}
+.pain {color: #d5d5d5;}
 
 .google-register {
     color:gray
