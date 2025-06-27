@@ -40,15 +40,18 @@ document.addEventListener("DOMContentLoaded", async function () {
         postElement.id = postnum;
 
         postElement.innerHTML = `
-            <div class="post-author">Author: ${post.author_id}</div>
+            <div class="post-author" id="${postnum}-author">Author: ${post.author_id}</div>
             <div class="post-content">${post.content}</div>
-            <div class="post-date">Posted on: ${new Date(post.created_at).toLocaleString()}</div>
+            <div class="post-date">Posted on: ${new Date(post.created_at)}</div>
             <div class="post-like" id="${postnum}-like"><button>Like!</button></div>
         `;
         feed.appendChild(postElement);
 
         document.getElementById(`${postnum}-like`).addEventListener("click", async function () {
             likePost(postnum);
+        });
+        document.getElementById(`${postnum}-author`).addEventListener("click", async function () {
+            window.location.href = `./user.html?id=${post.author_id}`;
         });
         postnum += 1;
     });

@@ -9,12 +9,13 @@ function createPost(content, mood, error) {
         body: JSON.stringify({
             content: content,
             mood: mood,
-            created_at: new Date(),
+            created_at: new Date().getDate(),
         })
     })
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            window.location.href = "./main.html";
         })
         .catch(error => {
             console.error('Network error:', error);

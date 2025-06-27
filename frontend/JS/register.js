@@ -6,10 +6,7 @@ function register(username, password, email, name, surname, phone, errormsg) {
     } else if (password.length > 48) {
         errormsg.style.display = "block";
         errormsg.innerHTML = "Password must be shorter than 48 characters"
-<<<<<<< HEAD
         return 1;
-=======
->>>>>>> 2fa6096 (Upd)
     }
 
     if (username.length < 3) {
@@ -43,8 +40,7 @@ function register(username, password, email, name, surname, phone, errormsg) {
     fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearers supersecretkey'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             username: username,
@@ -55,10 +51,20 @@ function register(username, password, email, name, surname, phone, errormsg) {
             phone_number: phone,
         })
     })
-        .then(response => response.json())
-        .then(data => console.log(data))
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => { errormsg.style.display = "block";
+        errormsg.innerHTML = errorData.msg;})
+            } else {
+                return response.json();
+            }
+        })
+        .then(data => function () {
+            console.log(data);
+            window.location.href = "./login.html";
+        })
         .catch(error => console.error('Error:', error));
-
+    
 }
 
 
@@ -72,11 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = document.getElementById("name").value;
         const surname = document.getElementById("surname").value;
         const phone = document.getElementById("phone").value;
-<<<<<<< HEAD
         const errormsg = document.getElementById("error");
-=======
-        const errormsg = document.getElementById("errormsg");
->>>>>>> 2fa6096 (Upd)
 
         register(username, password, email, name, surname, phone, errormsg);
         

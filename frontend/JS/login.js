@@ -14,6 +14,7 @@ function login(username, password, errormsg) {
             if (data.access_token) {
                 localStorage.setItem('jwt_key', data.access_token);
                 console.log('Login successful:', data);
+                window.location.href = "./main.html";
             } else {
                 console.error('Login failed:', data.msg);
                 if (errormsg) {

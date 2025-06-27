@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../CSS/style.css">
-    <title>Sign up</title>
+    <title>Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <div id="signup-form">
             <div class="right-edge">
-                <h3>Sign up</h3>
+                <h3 onclick="window.location.href = './register.html'">Sign up</h3>
             </div>
         <img id="logo"src="./static/logo.svg" alt="Logo">
-        <h2 id="slogan">W.T.W.</h2>
+        <h2 id="slogan" class="monomaniac-one-regular">W.T.W.</h2>
         <div class="left-edge">
-            <h2 class="register-text" href="./register.html">Sign up</h2>
+            <h2 class="register-text">Log in</h2>
             <form method="POST">
                 <input type="text" placeholder="Username" id="username">
                 <input type="password" placeholder="Password" id="password">

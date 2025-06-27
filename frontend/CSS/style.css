@@ -6,19 +6,16 @@
     margin-top: 10%;
 }
 form {
-<<<<<<< HEAD
     margin-top: 180px;
 }
 
+
 #about-me {
     display: flex;
-    margin-top: 50px;
     flex-direction: column;
-    align-content: flex-end;
-}
-
-#about-username {
-
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
 }
 
 #post-feed {
@@ -26,22 +23,44 @@ form {
     margin-top: 50px;
 }
 .post {
+    margin-block: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-style: solid;
-    border-color: #949494;
+    border-color: #d5d5d5;
+    background-color: #d5d5d5;
     padding-inline: 9px;
 }
 .post-author {
-    color: #666666;
+    color: #1c1c1c;
 }
 .post-content {
     font-weight: 1000;
 }
 
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.monomaniac-one-regular {
+  font-family: "Monomaniac One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .post-like {
     color: #000000;
-=======
-    margin-top: 80px;
->>>>>>> 2fa6096 (Upd)
 }
 
 .google-register {
@@ -50,11 +69,7 @@ form {
 
 #logo {
     position:absolute;
-<<<<<<< HEAD
-    margin-top: 170px;
-=======
-    margin-top: 100px;
->>>>>>> 2fa6096 (Upd)
+    margin-top: 130px;
 }
 
 .left-edge {
@@ -91,16 +106,12 @@ input {
 
 #slogan {
     position:absolute;
-<<<<<<< HEAD
-    margin-top: 250px;
-=======
     margin-top: 200px;
->>>>>>> 2fa6096 (Upd)
     font-family: 'IM FELL Great Primer SC', 'Times New Roman';
     color: #000000;
 }
 
-#errormsg {
+#error {
     display: none;
     color: rgb(255, 0, 0);
 }
@@ -123,6 +134,13 @@ input {
     border-color: white;
     background-color: white;
     border-radius: 1000px;
+}
+.navbar-btn img {
+    width: 40px;
+}
+#post img {
+    bottom: 30px;
+    width: 60px;
 }
 .navbar-btn:active {
     transition-duration: 300ms;
@@ -151,4 +169,8 @@ input {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    /* background-image: url("./../HTML/static/navbg.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-x: center; */
 }

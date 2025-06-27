@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WTV - For You</title>
+    <title>WTW - For You</title>
     <link rel="stylesheet" href="./../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-top">
@@ -15,12 +18,14 @@
     <div id="post-feed"></div>
 
     <div id="navbar-bottom">
-        <button class="navbar-btn">H</button> <!-- Home -->
-        <button class="navbar-btn">N</button>  <!-- Notifications -->
-        <button class="navbar-btn">+</button> <!-- Post -->
-        <button class="navbar-btn">S</button> <!-- Search -->
-        <button class="navbar-btn">P</button> <!-- Profile -->
+        <button class="navbar-btn" id="home"><img src="./static/home.png"></button> <!-- Home -->
+        <button class="navbar-btn" id="message"><img src="./static/message.png"></button>  <!-- Notifications -->
+        <button class="navbar-btn" id="post"><img src="./static/+.svg"></button> <!-- Post -->
+        <button class="navbar-btn" id="notifications"><img src="./static/notifications.png"></button> <!-- Search -->
+        <button class="navbar-btn" id="profile"><img src="./static/me.png"></button> <!-- Profile -->
     </div>
     <script src="./../JS/retreiveposts.js"></script>
+    <script src="./../JS/setupButtons.js"></script>
+
 </body>
 </html>
